@@ -1,0 +1,128 @@
+
+@import './slideshow.scss';
+
+.hero {
+
+
+
+    background-color: $verylightgrey;
+
+    @include breakpoint-up(large){
+        display: flex;
+        align-items: center;
+        
+    }
+   
+    &__sticky {
+        padding-top: 6.4rem;
+    }
+
+    /*
+    &__image {
+        
+        
+        position: relative;
+        background-image: url("../../images/sk8_background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 22rem;
+       
+
+        @include breakpoint-up(large){
+            flex: 3;
+            order: 2;
+            height: 100%;
+        }
+        
+       // z-index: 2;
+        
+
+        &::before {
+            content: ""; // before and after psuedoelements need to have a content element or they wont exist on page
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("../../images/background_overlay.png");
+            background-size: 85%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+           
+        }
+    } */
+
+    &__slideshow {
+        z-index: 5;
+
+        &_1 {
+
+            background-image: url("../../images/sk8_background.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            min-height: 25rem;
+            min-width: 25rem;
+        }
+        &_2 {
+            background-image: url("../../images/slide_img_2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 25rem;   
+            min-width: 25rem;        
+            
+        }
+        &_3 {
+            background-image: url("../../images/background_overlay.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            min-height: 25rem;  
+            min-width: 25rem;          
+        }
+
+
+    }
+
+    &__text {
+
+        text-align: center;
+
+        @include breakpoint-up(large){
+            flex: 1;
+            order: 1;
+            height: 100%;
+            text-align: left;
+        } 
+
+        h1 {
+            font-size: $large-font;
+            font-weight: 300;
+            line-height: 1.2;
+            color: $text_color;
+            margin-bottom: 1.15rem;
+
+            @include breakpoint-up(large) {
+                font-size: $xlarge-font
+            }
+
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 1.25rem;
+
+        }
+        
+    }
+/*
+    &__prof_img {
+        background-image: url("../../images/IMG_6595.jpg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 40%;
+        min-height: 15rem;
+        border: 1px solid red;
+    }*/
+}

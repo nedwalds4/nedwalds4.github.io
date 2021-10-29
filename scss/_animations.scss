@@ -1,0 +1,68 @@
+.has-fade {
+    visibility: hidden;
+}
+
+@keyframes fade-in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+        z-index: auto;
+
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+        z-index: 3;
+
+    }
+}
+.fade-in {
+    animation: fade-in 300ms ease-in-out forwards;
+    z-index: 3;
+}
+
+@keyframes fade-out {
+    from {
+        visibility: visible;
+        opacity: 1;
+        z-index: 3;
+        
+    }
+
+    99% {
+        visibility: visible;
+        opacity: 0;
+        z-index: 3;
+    }
+
+    to {
+        visibility: hidden;
+        opacity: 0;
+        z-index: auto;
+
+    }
+}
+.fade-out {
+    animation: fade-out 300ms ease-in-out forwards;
+    z-index: auto;
+
+}
+
+@keyframes slide-fade {
+    from{
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.img_fade {
+    animation: slide-fade 1.5s ease-in-out;
+}

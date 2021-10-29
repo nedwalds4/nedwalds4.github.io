@@ -1,0 +1,28 @@
+
+@import './resets';
+@import './variables';
+@import './header';
+@import './animations';
+@import './hero';
+@import './slideshow';
+
+
+
+body{
+    background: $primary_color;
+    
+    
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+
+    #{&}_paragraph{
+        font-weight: map-get($font_weights, bold);
+
+        &:hover {
+            color: pink;
+        }
+    }
+}
